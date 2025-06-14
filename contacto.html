@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - MouseBuys</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Header = () => {
+        const toggleMenu = () => {
+          document.querySelector(".menu").classList.toggle("activo");
+        };
+
+        return (
+          <header className="header">
+            <a href="index.html" className="logo">
+              MouseBuys
+            </a>
+
+            <div className="header-right">
+              <nav className="menu">
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="game.html">Juego</a>
+                <a href="torneo.html">Torneo</a>
+              </nav>
+
+              <a
+                href="ingresar.html"
+                className="login-icon"
+                aria-label="Ingresar"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='0.95em'%20height='1em'%20viewBox='0%200%2017%2018'%3e%3cg%20fill='none'%20stroke='currentColor'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='M11.266%204.625a3.125%203.125%200%2010-6.25%200%203.125%203.125%200%20006.25%200Z'/%3e%3cpath%20d='M15.016%2017.75c0-3.452-3.079-6.25-6.875-6.25-3.797%200-6.875%202.798-6.875%206.25'/%3e%3c/g%3e%3c/svg%3e"
+                  alt="Usuario"
+                  className="login-img"
+                />
+              </a>
+              <a href="cart.html" className="cart-icon" aria-label="Cart">
+                <img
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='1.37em'%20height='1em'%20viewBox='0%200%2026%2019'%3e%3cg%20fill='none'%20stroke='currentColor'%3e%3cpath%20stroke-linejoin='round'%20stroke-width='2'%20d='m.14%201.171%205.049-.015L9.95%2010.97h10.832l4.024-9.806'/%3e%3cpath%20stroke-width='1.5'%20d='M12.847%2015.837a1.931%201.931%200%2011-3.862%200%201.931%201.931%200%20013.862%200m8.789%200a1.931%201.931%200%2011-3.862%200%201.931%201.931%200%20013.862%200'/%3e%3c/g%3e%3c/svg%3e"
+                  className="cart-img"
+                />
+              </a>
+
+              <button className="menu-toggle" onClick={toggleMenu}>
+                ☰
+              </button>
+            </div>
+          </header>
+        );
+      };
+
+      const Contacto = () => (
+        <section className="contacto">
+          <h2>Contacto</h2>
+          <p>
+            <strong>Dirección:</strong> La Molina, Av. la Fontana 1250, Lima
+            15024
+          </p>
+          <p>
+            <strong>Teléfono:</strong> (01) 2086000
+          </p>
+          <p>
+            <strong>Correo electrónico:</strong> mousebuys@gmail.com
+          </p>
+
+          <h2>¿Dónde encontrarnos?</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5853716918023!2d-76.94216089999999!3d-12.072023799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad%20de%20Ingenier%C3%ADa%20y%20Arquitectura%20-%20Universidad%20de%20San%20Mart%C3%ADn%20de%20Porres%20(USMP)!5e0!3m2!1ses!2spe!4v1742804973734!5m2!1ses!2spe"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="mapa"
+          ></iframe>
+        </section>
+      );
+
+      const TopBar = () => (
+        <div className="top-bar">
+          ¡Hazte con el mejor Mouse, al mejor precio!
+        </div>
+      );
+      const Navbar = () => null;
+      const Footer = () => <footer className="footer">© 2025 MouseBuys</footer>;
+
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <>
+          <Header />
+          <TopBar />
+          <Navbar />
+          <Contacto />
+          <Footer />
+        </>
+      );
+    </script>
+  </body>
+</html>
